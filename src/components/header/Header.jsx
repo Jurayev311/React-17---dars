@@ -9,8 +9,9 @@ import { FaRegSun } from "react-icons/fa";
 
 
 const Header = () => {
+
   return (
-    <header id='header' className='bg-black py-4'>
+    <header id='header' className='sticky top-0 left-0 z-40 bg-[#000000d8] flex items-center h-14'>
       <div className='container-all mx-auto flex items-center justify-between px-6'>
         <div className='flex items-center gap-4'>
           <img src={logo} alt='BilTick Logo' className='h-8' />
