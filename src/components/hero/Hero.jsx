@@ -50,7 +50,7 @@ const Hero = () => {
 
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                   <button className="bg-white cursor-pointer text-[#C61F1F] text-lg font-semibold px-20 py-2 rounded-[12px] flex items-center justify-center gap-2 hover:bg-gray-200">
-                  <FaPlay /> Смотреть
+                    <FaPlay /> Смотреть
                   </button>
                 </div>
               </div>
@@ -59,6 +59,43 @@ const Hero = () => {
           ))
         }
       </Swiper>
+
+
+      <div className='mt-[160px] rounded-2xl overflow-hidden'>
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={20}
+          pagination={false}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+          }}
+          modules={[Autoplay]}
+          className="mySwiper"
+        >
+          {
+            data?.results?.slice(0, 15).map((movies, index) => (
+              <SwiperSlide key={index}>
+                <img className='w-[280px] h-[400px] rounded-xl' src={import.meta.env.VITE_IMAGE_URL + movies.poster_path} alt='' />
+              </SwiperSlide>
+            ))
+          }
+        </Swiper>
+      </div>
     </div>
   )
 }
