@@ -3,14 +3,14 @@ import { FaInstagram, FaFacebookF, FaYoutube } from "react-icons/fa";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineLiveHelp, MdOutlineEmail, MdOutlineStar, MdSportsBasketball } from "react-icons/md";
 import { BsCameraReels, BsMusicNoteBeamed, BsFileText } from "react-icons/bs";
-import logo from "../assets/footer-logo.svg";
-import googlePlay from "../assets/google-play.svg";
-import appStore from "../assets/app-store.svg";
+import logo from "../../assets/footer-logo.svg";
+import googlePlay from "../../assets/google-play.svg";
+import appStore from "../../assets/app-store.svg";
 
 const Footer = () => {
   return (
     <div className="mt-[120px] mb-10">
-      <div className="container bg-[#111111] text-white flex items-center justify-between rounded-xl">
+      <div className="container-all bg-[#111111] text-white flex items-center justify-between rounded-xl">
 
         <div className="p-8">
           <img src={logo} alt="Logo" className="w-16 mb-12" />

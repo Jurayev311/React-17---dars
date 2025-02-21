@@ -5,7 +5,7 @@ const baseQuery = async (args, api, extraOptions) => {
   const rawBaseQuery = fetchBaseQuery({
     baseUrl: import.meta.env.VITE_BASE_URL,
     prepareHeaders: (headers) => {
-      const token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlM2U0Y2M0YzA2YzcwN2I0ODcyMWVlY2ZjMjE5MGVmYyIsIm5iZiI6MTcyODg3NzQyNi4yLCJzdWIiOiI2NzBjOTM3MmIxNWQ5N2IxYTkzY2UwZjIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.zZR_akio6SBvGWR4ThRbmrrWDuHZukkom4xo091rw8U" // localStorage.getItem("access_token")
+      const token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjY2Y1MDUxNjhlMDVkNTI3MjA0Y2I5NTZjZmFhOGFlOCIsIm5iZiI6MTczOTk2MDA2Mi4wNjMsInN1YiI6IjY3YjVhZWZlOWUzMmY3MmI0ZDg4YzFlNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-t7-9b_jiQif7K3fESRFV8-1k73eavexukAqvSSmSFk" // localStorage.getItem("access_token")
       if (token) {
         headers.set('Authorization', `Bearer ${token}`)
       }

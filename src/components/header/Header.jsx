@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../assets/logo.svg';
+import logo from '../../assets/logo.svg';
 import { IoHomeSharp } from 'react-icons/io5';
 import { BiSolidCameraMovie } from 'react-icons/bi';
 import { FaBookmark } from 'react-icons/fa';
@@ -11,7 +11,7 @@ import { FaRegSun } from "react-icons/fa";
 const Header = () => {
   return (
     <header id='header' className='bg-black py-4'>
-      <div className='container mx-auto flex items-center justify-between px-6'>
+      <div className='container-all mx-auto flex items-center justify-between px-6'>
         <div className='flex items-center gap-4'>
           <img src={logo} alt='BilTick Logo' className='h-8' />
         </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useGetMoviesQuery } from '../../redux/api/movie.api'
 import { Link } from 'react-router-dom'
+import Hero from '../../components/hero/Hero'
 
 const Home = () => {
   const { data } = useGetMoviesQuery({ page: 1, without_genres: "18,36,10749" })
@@ -8,7 +9,8 @@ const Home = () => {
 
   return (
     <>
-       <div className='container mx-auto'>
+    <Hero />
+       {/* <div className='container mx-auto'>
         <h2>Home</h2>
         <div className='grid grid-cols-5 gap-2.5'>
           {
@@ -25,7 +27,7 @@ const Home = () => {
             ))
           }
         </div>
-      </div>
+      </div> */}
     </>
   )
 }
