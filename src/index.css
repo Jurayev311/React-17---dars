@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+.container {
+    max-width: 1308px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+#header .active {
+    color: #C61F1F;
+}
+
+#admin-sidebar .active{
+    background: dodgerblue;
+}
+
+#group-tab .active{
+    color: dodgerblue ;
+    text-decoration: underline;
+}
