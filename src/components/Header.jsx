@@ -7,9 +7,6 @@ import { FaBookmark } from 'react-icons/fa';
 import { FaSearch } from 'react-icons/fa';
 import { FaRegSun } from "react-icons/fa";
 
-import ruFlag from '../assets/ru.svg';
-import enFlag from '../assets/eng.png';
-import uzFlag from '../assets/uz.png';
 
 const Header = () => {
   return (
@@ -43,13 +40,13 @@ const Header = () => {
         <div className='flex items-center gap-4'>
           <select className='bg-[#1D1D1D80] px-3 py-2 rounded-md text-white flex items-center text-[14px] font-normal'>
             <option value=''>
-              <img src={ruFlag} alt="Russian Flag" className="w-5 h-3 inline-block mr-2" /> Ру
+               Ру
             </option>
             <option value=''>
-              <img src={enFlag} alt="English Flag" className="w-5 h-3 inline-block mr-2" /> Eng
+               Eng
             </option>
             <option value=''>
-              <img src={uzFlag} alt="Uzbek Flag" className="w-5 h-3 inline-block mr-2" /> Uzb
+               Uzb
             </option>
           </select>
           <button className='px-4 py-2 text-white rounded-md cursor-pointer'><FaRegSun /></button>
