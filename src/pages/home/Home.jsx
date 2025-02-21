@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <>
-      {/* <div className='container mx-auto'>
+       <div className='container mx-auto'>
         <h2>Home</h2>
         <div className='grid grid-cols-5 gap-2.5'>
           {
@@ -25,7 +25,7 @@ const Home = () => {
             ))
           }
         </div>
-      </div> */}
+      </div>
     </>
   )
 }
