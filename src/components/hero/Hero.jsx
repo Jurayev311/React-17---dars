@@ -8,6 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const { data, isLoading } = useGetMoviesQuery();
@@ -48,11 +49,11 @@ const Hero = () => {
                   </p>
                 </div>
 
-                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+                <Link to={`movie/${movie.id}`} className="absolute bottom-6 left-1/2 transform -translate-x-1/2 mt-2">
                   <button className="bg-white cursor-pointer text-[#C61F1F] text-sm sm:text-base md:text-lg lg:text-xl font-semibold px-10 sm:px-14 md:px-20 lg:px-24 py-3 rounded-[12px] flex items-center justify-center gap-2 hover:bg-gray-200">
                     <FaPlay /> Смотреть
                   </button>
-                </div>
+                </Link>
               </div>
             </SwiperSlide>
           ))
@@ -80,11 +81,13 @@ const Hero = () => {
           {
             data?.results?.slice(0, 15).map((movie) => (
               <SwiperSlide key={movie.id} className='p-3'>
+                <Link to={`/movie/${movie.id}`}>
                 <img 
                   className='w-[160px] sm:w-[200px] md:w-[250px] lg:w-[300px] h-[240px] sm:h-[300px] md:h-[360px] lg:h-[420px] rounded-xl cursor-pointer' 
                   src={import.meta.env.VITE_IMAGE_URL + movie.poster_path} 
                   alt={movie.title} 
                 />
+                </Link>
                 <h2 className='text-white text-sm sm:text-base md:text-lg lg:text-xl font-medium mt-2'>{movie.title}</h2>
               </SwiperSlide>
             ))
