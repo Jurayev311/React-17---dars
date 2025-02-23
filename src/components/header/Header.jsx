@@ -56,9 +56,9 @@ const Header = () => {
         </div>
       </header>
 
-      <div className={`fixed top-0 right-0 h-full w-64 bg-[#000000d8] z-50 transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 right-0 h-full w-64 bg-[#000000f8] z-50 transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className='flex justify-end p-4'>
-          <FaTimes className='text-white text-2xl cursor-pointer' onClick={toggleSidebar} /> {/* FaTimes faqat sidebar ochiq bo'lganda ko'rinadi */}
+          <FaTimes className='text-white text-2xl cursor-pointer' onClick={toggleSidebar} /> 
         </div>
         <nav className='mt-8'>
           <ul className='flex flex-col items-start gap-7 text-white text-[12px] font-medium pl-6'>
