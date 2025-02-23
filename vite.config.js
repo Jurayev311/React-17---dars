@@ -10,12 +10,12 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       devOptions: {
-        enabled: false,
+        enabled: true,
       },
       manifest: {
-        name: "Car Wash",
-        short_name: "Car Wash",
-        description: "Car Wash",
+        name: "Moviez",
+        short_name: "Moviez",
+        description: "Moviez uz",
         // display: "fullscreen"
         theme_color: "#ffffff",
         icons: [
