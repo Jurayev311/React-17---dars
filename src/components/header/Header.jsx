@@ -56,25 +56,25 @@ const Header = () => {
         </div>
       </header>
 
-      <div className={`fixed top-0 right-0 h-full w-64 bg-[#000000f8] z-50 transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div id='sidebar' className={`fixed top-0 right-0 h-full w-64 bg-[#000000f8] z-50 transform transition-transform duration-300 ease-in-out ${isSidebarOpen ? 'translate-x-0' : 'translate-x-full'}`}>
         <div className='flex justify-end p-4'>
           <FaTimes className='text-white text-2xl cursor-pointer' onClick={toggleSidebar} /> 
         </div>
         <nav className='mt-8'>
           <ul className='flex flex-col items-start gap-7 text-white text-[12px] font-medium pl-6'>
-            <NavLink to='/' className='flex items-center gap-2 hover:text-red-500' onClick={toggleSidebar}>
+            <NavLink to='/' className='flex items-center w-full gap-2 hover:text-red-500' onClick={toggleSidebar}>
               <IoHomeSharp className='text-xl' />
               <span>Home</span>
             </NavLink>
-            <NavLink to='/movies' className='flex items-center gap-2 hover:text-red-500' onClick={toggleSidebar}>
+            <NavLink to='/movies' className='flex items-center w-full gap-2 hover:text-red-500' onClick={toggleSidebar}>
               <BiSolidCameraMovie className='text-xl' />
               <span>Movies</span>
             </NavLink>
-            <NavLink to='/saved' className='flex items-center gap-2 hover:text-red-500' onClick={toggleSidebar}>
+            <NavLink to='/saved' className='flex items-center w-full gap-2 hover:text-red-500' onClick={toggleSidebar}>
               <FaBookmark className='text-xl' />
               <span>Saved</span>
             </NavLink>
-            <NavLink to='/search' className='flex items-center gap-2 hover:text-red-500' onClick={toggleSidebar}>
+            <NavLink to='/search' className='flex items-center w-full gap-2 hover:text-red-500' onClick={toggleSidebar}>
               <FaSearch className='text-xl' />
               <span>Search</span>
             </NavLink>
