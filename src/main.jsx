@@ -14,8 +14,9 @@ const themeConfig = {
     // colorSuccess: "#52c41a",
     // colorWarning: "#faad14",
     // colorError: "#ff4d4f",
+    colorText: "#fff",
     borderRadius: 4,
-    colorBgContainer: "#fff",
+    colorBgContainer: "#1a1c1a",
   },
 };
 

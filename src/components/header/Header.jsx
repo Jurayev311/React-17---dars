@@ -30,7 +30,7 @@ const Header = () => {
                 <IoHomeSharp className='text-xl' />
                 <span>Home</span>
               </NavLink>
-              <NavLink to='/movies' className='flex flex-col items-center gap-1 hover:text-red-500'>
+              <NavLink to='/all-movies' className='flex flex-col items-center gap-1 hover:text-red-500'>
                 <BiSolidCameraMovie className='text-xl' />
                 <span>Movies</span>
               </NavLink>
@@ -66,7 +66,7 @@ const Header = () => {
               <IoHomeSharp className='text-xl' />
               <span>Home</span>
             </NavLink>
-            <NavLink to='/movies' className='flex items-center w-full gap-2 hover:text-red-500' onClick={toggleSidebar}>
+            <NavLink to='/all-movies' className='flex items-center w-full gap-2 hover:text-red-500' onClick={toggleSidebar}>
               <BiSolidCameraMovie className='text-xl' />
               <span>Movies</span>
             </NavLink>

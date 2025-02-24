@@ -2,7 +2,7 @@ import React from 'react'
 
 const Search = () => {
   return (
-    <div>Search</div>
+    <div className='container mx-auto max-w-[1308px] text-white'>Search page</div>
   )
 }
 

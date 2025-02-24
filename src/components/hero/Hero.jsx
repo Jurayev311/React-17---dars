@@ -12,7 +12,6 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const { data, isLoading } = useGetMoviesQuery();
-  console.log(data);
 
   useEffect(() => {
     window.scrollTo({ behavior: "smooth", left: 0, top: 0 });
