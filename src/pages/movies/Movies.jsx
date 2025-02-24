@@ -49,7 +49,7 @@ const Movies = () => {
     <div id="genreContainer" className="container mx-auto max-w-[1308px] flex items-center justify-start gap-2 mb-4 mt-2 overflow-auto">
     {
       genreData?.genres?.map((genre) => (
-        <div onClick={() => handleChangeGenre(genre.id)} key={genre.id} className={`text-white whitespace-nowra px-3.5 py-1 cursor-pointer rounded-xl active:scale-95 duration-200 ${with_genres.includes(genre.id.toString())? "bg-red-600" : "bg-slate-900"}`}>
+        <div onClick={() => handleChangeGenre(genre.id)} key={genre.id} className={`whitespace-nowrap text-white whitespace-nowra px-3.5 py-1 cursor-pointer rounded-xl active:scale-95 duration-200 ${with_genres.includes(genre.id.toString())? "bg-red-600" : "bg-slate-900"}`}>
           {genre.name}
         </div>
       ))
