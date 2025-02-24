@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useGetGenresQuery, useGetMoviesQuery } from "../../redux/api/movie.api";
 import { Pagination } from "antd";
 import { Link, useSearchParams } from "react-router-dom";
-import { Empty } from 'antd';
+// import { Empty } from 'antd';
 import noImage from "../../assets/no-image.png";
 
 const Movies = () => {
