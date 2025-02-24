@@ -34,6 +34,7 @@ const Movies = () => {
       array.push(id)
     }
     params.set("genres", array.join("-"))
+    params.set("page", 1)
     setParams(params);
   }
 
