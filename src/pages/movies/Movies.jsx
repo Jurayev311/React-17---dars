@@ -46,10 +46,10 @@ const Movies = () => {
     <>
 
 
-    <div id="genreContainer" className="container mx-auto max-w-[1308px] flex items-center justify-start gap-2 mb-4 mt-2 overflow-auto">
+    <div id="genreContainer" className="container mx-auto max-w-[1250px] flex items-center justify-start gap-2 mb-4 mt-2 overflow-auto">
     {
       genreData?.genres?.map((genre) => (
-        <div onClick={() => handleChangeGenre(genre.id)} key={genre.id} className={`whitespace-nowrap text-white whitespace-nowra px-3.5 py-1 cursor-pointer rounded-xl active:scale-95 duration-200 ${with_genres.includes(genre.id.toString())? "bg-red-600" : "bg-slate-900"}`}>
+        <div onClick={() => handleChangeGenre(genre.id)} key={genre.id} className={`whitespace-nowrap text-gray-800 whitespace-nowra px-3.5 py-1 cursor-pointer rounded-xl active:scale-95 duration-200 ${with_genres.includes(genre.id.toString())? "bg-red-600 text-white" : "dark:bg-slate-900 dark:text-white bg-slate-300"}`}>
           {genre.name}
         </div>
       ))
@@ -72,7 +72,7 @@ const Movies = () => {
               </Link>
               <h2
                 title={movie.title}
-                className="text-white mb-3 text-sm sm:text-base md:text-lg lg:text-xl font-medium mt-2 cursor-default text-center"
+                className="mb-3 text-sm sm:text-base md:text-lg lg:text-xl font-medium mt-2 cursor-default text-center"
                 style={{
                   whiteSpace: "nowrap",
                   overflow: "hidden",

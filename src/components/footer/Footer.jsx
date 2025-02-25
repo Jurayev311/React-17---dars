@@ -9,11 +9,9 @@ import appStore from "../../assets/app-store.svg";
 
 const Footer = () => {
   return (
-    <div className="mt-16 mb-10 p-3">
-      <div className="container-all bg-[#111111] text-white flex flex-wrap md:flex-nowrap items-center justify-between rounded-xl p-6 md:p-8 lg:p-12 lg:rounded-xl w-full lg:w-auto 
-      lg:max-w-screen-xl mx-auto lg:bg-[#111111] lg:rounded-xl lg:w-auto"
-      >
-        <div className="p-4 text-center md:text-left flex-1 min-w-[250px]">
+    <div className="mt-16 pb-5 p-3">
+      <div className="container-all bg-slate-100 text-black dark:bg-[#111111] dark:text-white flex flex-wrap md:flex-nowrap items-center justify-between rounded-xl p-6 md:p-8 lg:p-12 w-full max-w-screen-xl mx-auto md:gap-4">
+        <div className="p-4 text-center md:text-left flex-1 min-w-[250px] md:min-w-0">
           <img src={logo} alt="Logo" className="w-12 sm:w-14 md:w-16 mb-6 mx-auto md:mx-0" />
           <div className="flex flex-col gap-3 items-center md:items-start">
             <img src={googlePlay} alt="Google Play" className="w-28 sm:w-32 md:w-36 cursor-pointer" />
@@ -21,7 +19,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="p-4 text-center md:text-left flex-1 min-w-[250px]">
+        <div className="p-4 text-center md:text-left flex-1 min-w-[250px] md:min-w-0">
           <h3 className="text-base sm:text-lg font-semibold mb-4">О нас</h3>
           <ul className="space-y-2 text-sm sm:text-base">
             <li className="flex items-center gap-2 justify-center md:justify-start cursor-pointer hover:text-red-500">
@@ -39,7 +37,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="p-4 text-center md:text-left flex-1 min-w-[250px]">
+        <div className="p-4 text-center md:text-left flex-1 min-w-[250px] md:min-w-0">
           <h3 className="text-base sm:text-lg font-semibold mb-4">Категории</h3>
           <ul className="space-y-2 text-sm sm:text-base">
             <li className="flex items-center gap-2 justify-center md:justify-start cursor-pointer hover:text-red-500">
@@ -57,7 +55,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="p-4 text-center md:text-left flex-1 min-w-[250px]">
+        <div className="p-4 text-center md:text-left flex-1 min-w-[250px] md:min-w-0">
           <h3 className="text-base sm:text-lg font-semibold mb-4">Связаться с нами</h3>
           <p className="flex items-center gap-2 justify-center md:justify-start text-red-500 text-sm sm:text-base md:text-lg">
             <FiPhone /> +998 (95) 897-33-38

@@ -42,8 +42,8 @@ const Hero = () => {
                 />
 
                 <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 w-full px-4 md:px-10 text-center">
-                  <h2 className="text-white text-[20px] sm:text-[24px] md:text-[28px] lg:text-[34px] xl:text-[40px] mb-2 font-bold">{movie.title}</h2>
-                  <p className="text-white text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] mb-3 font-bold opacity-80">
+                  <h2 className=" text-white text-[20px] sm:text-[24px] md:text-[28px] lg:text-[34px] xl:text-[40px] mb-2 font-bold">{movie.title}</h2>
+                  <p className=" text-white text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] mb-3 font-bold opacity-80">
                     {movie.release_date}
                   </p>
                 </div>
@@ -88,7 +88,7 @@ const Hero = () => {
             alt={movie.title} 
           />
         </Link>
-        <h2 className='text-white text-xs sm:text-sm md:text-base lg:text-lg font-medium mt-2'>{movie.title}</h2>
+        <h2 className='line-clamp-1 text-xs sm:text-sm md:text-base lg:text-lg font-medium mt-2'>{movie.title}</h2>
       </SwiperSlide>
     ))
   }

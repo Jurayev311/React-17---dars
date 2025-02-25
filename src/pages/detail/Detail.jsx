@@ -15,7 +15,7 @@ const Detail = () => {
   }, []);
 
   return (
-    <div className="text-white min-h-screen py-6">
+    <div className="dark:text-white min-h-screen py-6">
       <div className="container mx-auto max-w-[1400px] px-4">
         
         <div className="relative rounded-xl overflow-hidden">
