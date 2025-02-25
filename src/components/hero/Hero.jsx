@@ -60,38 +60,40 @@ const Hero = () => {
       </Swiper>
 
       <div className='mt-[70px] rounded-2xl overflow-hidden'>
-        <Swiper
-          slidesPerView={1}
-          spaceBetween={10}
-          pagination={false}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            '@0.00': { slidesPerView: 1, spaceBetween: 10 },
-            '@0.75': { slidesPerView: 2, spaceBetween: 20 },
-            '@1.00': { slidesPerView: 3, spaceBetween: 40 },
-            '@1.50': { slidesPerView: 4, spaceBetween: 50 },
-          }}
-          modules={[Pagination, Autoplay]}
-          className="mySwiper"
-        >
-          {
-            data?.results?.slice(0, 15).map((movie) => (
-              <SwiperSlide key={movie.id} className='p-3'>
-                <Link to={`/movie/${movie.id}`}>
-                <img 
-                  className='w-[160px] sm:w-[200px] md:w-[250px] lg:w-[300px] h-[240px] sm:h-[300px] md:h-[360px] lg:h-[420px] rounded-xl cursor-pointer' 
-                  src={import.meta.env.VITE_IMAGE_URL + movie.poster_path} 
-                  alt={movie.title} 
-                />
-                </Link>
-                <h2 className='text-white text-sm sm:text-base md:text-lg lg:text-xl font-medium mt-2'>{movie.title}</h2>
-              </SwiperSlide>
-            ))
-          }
-        </Swiper>
+      <Swiper
+  slidesPerView={1} // Default holat (eng kichik ekranlar uchun)
+  spaceBetween={10}
+  pagination={false}
+  autoplay={{
+    delay: 5000,
+    disableOnInteraction: false,
+  }}
+  breakpoints={{
+    300: { slidesPerView: 2, spaceBetween: 5 },  // 300px+ ekranlar uchun 2 ta slayd
+    480: { slidesPerView: 3, spaceBetween: 10 }, // 480px+ ekranlar uchun 2 ta slayd
+    640: { slidesPerView: 4, spaceBetween: 10 }, // 640px+ ekranlar uchun 2 ta slayd
+    768: { slidesPerView: 5, spaceBetween: 15 }, // 768px+ ekranlar uchun 3 ta slayd
+    1024: { slidesPerView: 5, spaceBetween: 20 }, // 1024px+ ekranlar uchun 4 ta slayd
+  }}
+  modules={[Pagination, Autoplay]}
+  className="mySwiper"
+>
+  {
+    data?.results?.slice(0, 15).map((movie) => (
+      <SwiperSlide key={movie.id} className='p-3'>
+        <Link to={`/movie/${movie.id}`}>
+          <img 
+            className='w-[140px] sm:w-[180px] md:w-[220px] lg:w-[260px] h-[200px] sm:h-[260px] md:h-[320px] lg:h-[380px] rounded-xl cursor-pointer' 
+            src={import.meta.env.VITE_IMAGE_URL + movie.poster_path} 
+            alt={movie.title} 
+          />
+        </Link>
+        <h2 className='text-white text-xs sm:text-sm md:text-base lg:text-lg font-medium mt-2'>{movie.title}</h2>
+      </SwiperSlide>
+    ))
+  }
+</Swiper>
+
       </div>
     </div>
   );
