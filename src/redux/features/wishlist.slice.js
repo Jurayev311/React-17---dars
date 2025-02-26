@@ -1,12 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const loadWishlist = () => {
-  const data = localStorage.getItem("wishlist"); //obyekt
-  return data ? JSON.parse(data) : [];
-};
-
 const initialState = {
-  wishlist: loadWishlist(),
+  wishlist: JSON.parse(localStorage.getItem("wishlist")) || [],
 };
 
 const wishlistSlice = createSlice({
