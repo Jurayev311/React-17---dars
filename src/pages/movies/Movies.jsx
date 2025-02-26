@@ -4,7 +4,7 @@ import { Pagination, Empty } from "antd";
 import { Link, useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addWishlist, removeWishlist } from "../../redux/features/wishlist.slice";
-import { FaBookmark, FaHeart, FaRegHeart } from "react-icons/fa"; // Yurakcha ikonalar
+import { FaBookmark } from "react-icons/fa";
 import noImage from "../../assets/no-image.png";
 import SkeletonLoader from "../../components/loading/Loading";
 import { FaRegBookmark } from "react-icons/fa6";
