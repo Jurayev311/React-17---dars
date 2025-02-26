@@ -1,12 +1,23 @@
+import React from 'react';
 import { Suspense } from "react";
-import loadingImage from "../assets/ZKZg.gif" 
+import { LoadingOutlined } from '@ant-design/icons';
+import { Spin } from 'antd';
 
-export const Loading = ()=>{
-    return <div className="w-full h-screen flex items-center justify-center">
-        <img src={loadingImage} className="w-[100px]" alt="" />
-    </div>
-}
+export const Loading = () => {
+    return (
+        <div className="w-full h-screen flex items-center justify-center">
+            <Spin
+                indicator={
+                    <LoadingOutlined
+                        style={{ fontSize: 48 }}
+                        spin
+                    />
+                }
+            />
+        </div>
+    );
+};
 
-export const SuspenseContainer = ({children}) => {
-    return <Suspense fallback={<Loading/>}>{children}</Suspense>
-}
+export const SuspenseContainer = ({ children }) => {
+    return <Suspense fallback={<Loading />}>{children}</Suspense>;
+};

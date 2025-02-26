@@ -27,8 +27,15 @@ const extendedApi = mainApi.injectEndpoints({
         method: "GET",
       }),
     }),
+    getSearch: build.query({
+      query: (params) => ({
+        url: `/search/movie`,
+        method: "GET",
+        params,
+      }),
+    }),
   }),
   overrideExisting: false,
 })
 
-export const { useGetGenresQuery, useGetMoviesQuery, useGetSingleMovieQuery, useGetSingleMovieImagesQuery } = extendedApi
+export const { useGetSearchQuery, useGetGenresQuery, useGetMoviesQuery, useGetSingleMovieQuery, useGetSingleMovieImagesQuery } = extendedApi
