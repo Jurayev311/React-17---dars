@@ -3,7 +3,7 @@ import { useGetGenresQuery, useGetMoviesQuery } from "../../redux/api/movie.api"
 import { Pagination, Empty } from "antd";
 import { Link, useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addToWishlist, removeFromWishlist } from "../../redux/features/wishlist.slice";
+import { addWishlist, removeWishlist } from "../../redux/features/wishlist.slice";
 import { FaHeart, FaRegHeart } from "react-icons/fa"; // Yurakcha ikonalar
 import noImage from "../../assets/no-image.png";
 import SkeletonLoader from "../../components/loading/Loading";
@@ -96,8 +96,8 @@ const Movies = () => {
                   className="absolute top-2 right-2 text-white bg-black/60 rounded-full p-1.5"
                   onClick={() => 
                     isInWishlist
-                      ? dispatch(removeFromWishlist(movie.id))
-                      : dispatch(addToWishlist(movie))
+                      ? dispatch(removeWishlist(movie.id))
+                      : dispatch(addWishlist(movie))
                   }
                 >
                   {isInWishlist ? <FaHeart className="text-red-500" size={20} /> : <FaRegHeart size={20} />}

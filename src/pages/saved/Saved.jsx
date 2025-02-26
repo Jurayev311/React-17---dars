@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromWishlist } from "../../redux/features/wishlist.slice";
+import { removeWishlist } from "../../redux/features/wishlist.slice";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import noImage from "../../assets/no-image.png";
@@ -28,7 +28,7 @@ const Saved = () => {
 
               <button
                 className="absolute top-2 right-2 text-white bg-black/60 rounded-full p-2"
-                onClick={() => dispatch(removeFromWishlist(movie.id))}
+                onClick={() => dispatch(removeWishlist(movie.id))}
               >
                 <FaHeart className="text-red-500" size={20} />
               </button>
