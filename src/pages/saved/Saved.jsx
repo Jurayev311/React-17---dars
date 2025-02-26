@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa";
 import noImage from "../../assets/no-image.png";
 import { Empty } from "antd";
+import { FaBookmark } from "react-icons/fa6";
 
 const Saved = () => {
   const wishlist = useSelector((state) => state.wishlist.wishlist);
@@ -30,7 +31,7 @@ const Saved = () => {
                 className="absolute top-2 right-2 text-white bg-black/60 rounded-full p-2"
                 onClick={() => dispatch(removeWishlist(movie.id))}
               >
-                <FaHeart className="text-red-500" size={20} />
+                <FaBookmark  className="text-red-500" size={18} />
               </button>
 
               <h2
